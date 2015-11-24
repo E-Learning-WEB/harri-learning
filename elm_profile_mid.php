@@ -37,7 +37,6 @@ if (isset($_SESSION['id_anggota']))
                     </div>
                     <!--EDIT PROFILE END-->
                 </div>
-                <span>&nbsp;</span>
                 <div class="span8">
                 	<!--EDIT PROFILE START-->
                 	<div class="profile-box editing">

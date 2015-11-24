@@ -7,8 +7,8 @@
           <li><img src="images/banner4.jpg" alt=""></li>
         </ul>
         <div class="newsletters">
-        	<h1>HTML PROGRAMMING</h1>
-            <h4>Belajar bahasa pemrograman HTML dengan mudah.</h4>
+        	<h1>PHP PROGRAMMING</h1>
+            <h4>Belajar bahasa pemrograman PHP dengan mudah.</h4>
         </div>
     </div>
     <!--BANNER END-->
