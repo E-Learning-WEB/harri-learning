@@ -1,3 +1,8 @@
+<section class="gray-bg">
+		<div class="container">
+			<div class="row">
+                <div class="span12">
+
 <?php
 include('con_koneksi.php');
 include('function.php');
@@ -9,18 +14,35 @@ $id_materi	= $_GET['id_materi'];
 $sql 		= "select * from tbmateri where id_materi=$id_materi";
 $data 		= mysql_query($sql);
 $row 		= mysql_fetch_assoc($data);
-
-if(isset($row['materi']))
-	{
-	$lokasi = 'material/pdf/'.$row['materi'];
-	}
+$lokasi = 'upload/'.$row['waktu'] .'_'.$row['file'];
+$extensi_belakang = pathinfo($lokasi,PATHINFO_EXTENSION);
 ?>
-	<section class="gray-bg">
-		<div class="container">
-			<div class="row">
-                <div class="span12">
-                <h2><?php echo $row['judul']; ?></h2><br />
-                <object data="<?php echo $lokasi?>" width="100%" height="600px"></object>
+
+<?php
+//jika pdf
+if(strtoupper($extensi_belakang) == 'PDF')	{
+?>	
+
+	<legend><span style="float:left"><a href="materi.php"><i class="fa fa-arrow-circle-left fa-2x"></i></a></span>
+	<?php echo $row['judul']; ?></legend>
+    <object data="<?php echo $lokasi?>" width="100%" height="600px"></object>
+
+<?php } ?>
+
+<?php
+//jika MP4
+if(strtoupper($extensi_belakang) == 'MP4') {
+?>
+
+	<legend><span style="float:left"><a href="materi.php"><i class="fa fa-arrow-circle-left fa-2x"></i></a></span>
+	<?php echo $row['judul']; ?></legend>
+    <video width="100%" height="100%" controls>
+  	<source src="<?php echo $lokasi?>" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+    
+<?php } ?>
+                
                 </div>
 			</div>
     	</div>

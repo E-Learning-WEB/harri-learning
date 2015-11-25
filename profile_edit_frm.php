@@ -120,7 +120,7 @@ if (isset($_POST['edit_foto']))
                         <ul>
                         	<li>
                             	<label>Username</label>
-                                <input name="id_anggota" type="text" class="input-block-level"  placeholder="Enter your Username" value="<?php echo $row['id_anggota'];?>" readonly="readonly">
+                                <input name="id_anggota" type="text" class="input-block-level"  placeholder="Enter your Username" value="<?php echo $row['id_anggota'];?>" readonly>
                             </li>
                             <li>
                             	<label>Nama</label>

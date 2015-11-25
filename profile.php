@@ -5,44 +5,104 @@
     <meta charset="utf-8">
     <title>Education</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CUSTOM CSS -->
-    <link href="css/style.css" rel="stylesheet" media="screen">
-    <link href="css/color.css" rel="stylesheet" media="screen">
-    <link href="css/transitions.css" rel="stylesheet" media="screen">
-    <!-- BOOTSTRAP -->
-    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
-    <!-- BX SLIDER-->
-    <link href="css/jquery.bxslider.css" rel="stylesheet" media="screen">
-    <!-- OWL CAROUSEL -->
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
-    <!-- PARALLAX BACKGROUNDS -->
-    <link href="css/parallax.css" rel="stylesheet" type="text/css" />
-
-
+	<?php include'elm_css.php'; ?>   
 </head>
 <body>
 <!--WRAPPER START-->
 <div class="wrapper">
     <?php include'elm_menu.php'; ?>
-    <?php include'elm_profile_top.php'; ?>
-    <?php include'elm_profile_mid.php'; ?>
-	<?php include'elm_profile_foot.php'; ?>
-    
-       
+    <?php include'elm_banner_profile.php'; ?>
+
+<?php
+if (isset($_SESSION['id_anggota']))
+	{
+	include('con_koneksi.php');
+	include('function_foto.php');
+	$id_anggota = $_SESSION['id_anggota'];
+	$sql 		= "select * from tbanggota where id_anggota='$id_anggota'";
+	$data 		= mysql_query($sql);
+	
+	if (mysql_num_rows($data)>0) 
+		{
+		$row = mysql_fetch_assoc($data);
+?>
+
+<!--CONTANT START-->
+    <div class="contant">
+    	<div class="container">
+        	<div class="row">
+            <div class="span4">
+            <!--PROFILE IMAGE START-->
+            <div class="profile-box profile-view">
+            <div class="thumb">
+            <img src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" 
+            	alt="" width="140px" height="140px">
+            </div>
+            <div class="text">
+            <p>Selamat Datang</p>
+            <a class="btn-style"><?php echo $row['nama'];?></a>
+            </div>
+            </div>
+            <!--PROFILE IMAGE END-->
+            <!--EDIT PROFILE START-->
+            <div class="profile-box edit-profile">
+            <h2>Account Setting</h2>
+            <ul>
+            	<li><a href="profile_edit.php">Edit Profil</a></li>
+            </ul>
+            </div>
+            <!--EDIT PROFILE END-->
+            </div>
+            <div class="span8">
+            <!--EDIT PROFILE START-->
+            <div class="profile-box editing">
+            <h2>Data Profil</h2>
+            <ul>
+            	<li>
+            	<label><strong>Username</strong></label><br />
+                <label><?php echo $row['id_anggota'];?></label>
+                </li>
+                <li>
+                <label><strong>Nama</strong></label><br />
+                <label><?php echo $row['nama'];?></label>
+                </li>
+                <li>
+                <label><strong>Email</strong></label><br />
+                <label><?php echo $row['email'];?></label>
+                </li>
+                <li>
+                <label><strong>Jenis Kelamin</strong></label><br />
+                <label><?php echo $row['jenis_kelamin'];?></label>
+                </li>
+                <li>
+                <label><strong>Alamat</strong></label><br />
+                <label><?php echo $row['alamat'];?></label>
+                </li>
+                <li>
+                <label><strong>Kota</strong></label><br />
+                <label><?php echo $row['kota'];?></label>
+                </li>
+                <li>
+                <label><strong>Tempat & Tanggal Lahir</strong></label><br />
+                <label><?php echo $row['ttl'];?></label>
+                </li>
+                <li>
+                <label><strong>Nomor Kontak</strong></label><br />
+                <label><?php echo $row['no_kontak'];?></label>
+                </li>
+			</ul>
+            </div>
+            <!--EDIT PROFILE END-->
+            </div>
+            </div>
+        </div>
+	</div>
+<!--CONTANT END-->
+<?php } } ?>
+
+	<?php include'elm_footer.php'; ?>       
 </div>
 <!--WRAPPER END-->
-<!-- Jquery Lib -->
-<script src="js/jquery-1.11.0.min.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
-<script src="js/owl.carousel.js"></script>
-<script src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/skrollr.min.js"></script>
-<script src="js/functions.js"></script>
+<?php include'elm_js.php'; ?>   
 </body>
 </html>

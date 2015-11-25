@@ -8,7 +8,7 @@
 		if (mysql_num_rows($data)>0)
 			{
 			$row = mysql_fetch_assoc($data);
-			$_SESSION['login']=True;
+			$_SESSION['login_phpro']=True;
 			$_SESSION['nama'] = $row['nama'];
 			$_SESSION['id_anggota'] = $row['id_anggota'];
 			$_SESSION['password'] = $row['password'];
@@ -17,7 +17,7 @@
 			}
 		}
 		
-			if (isset($_SESSION['login']))
+			if (isset($_SESSION['login_phpro']))
 				{
 				echo '<meta http-equiv="refresh" content="3; url=index.php" /><br/>';
 				echo '                
@@ -56,7 +56,7 @@
                         <form action="signin.php" method="post">
                         <div class="form-body">
                         <fieldset>
-                        <legend>Masuk Untuk Mendapatkan Akses Lebih di HTPRO</legend>
+                        <legend>Masuk Untuk Mendapatkan Akses Lebih di PHPRO</legend>
                         <label>Username</label>
                         <input name="id_anggota" type="text" placeholder="Enter your Username" class="input-block-level" maxlenght="10" required="required">
                         <label>Password</label>

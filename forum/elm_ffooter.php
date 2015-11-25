@@ -1,6 +1,3 @@
-
-    </div>
-    <!--CONTANT END-->
     <!--FOOTER START-->
     <footer>
         

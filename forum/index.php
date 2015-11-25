@@ -5,44 +5,88 @@
     <meta charset="utf-8">
     <title>Education</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CUSTOM CSS -->
-    <link href="../css/style.css" rel="stylesheet" media="screen">
-    <link href="../css/color.css" rel="stylesheet" media="screen">
-    <link href="../css/transitions.css" rel="stylesheet" media="screen">
-    <!-- BOOTSTRAP -->
-    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="../css/bootstrap-responsive.css" rel="stylesheet" media="screen">
-    <!-- BX SLIDER-->
-    <link href="../css/jquery.bxslider.css" rel="stylesheet" media="screen">
-    <!-- OWL CAROUSEL -->
-    <link href="../css/owl.carousel.css" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link href="../css/font-awesome.min.css" rel="stylesheet" media="screen">
-    <!-- PARALLAX BACKGROUNDS -->
-    <link href="../css/parallax.css" rel="stylesheet" type="text/css" />
-
-
+	<?php include'elm_fcss.php'; ?>
 </head>
 <body>
 <!--WRAPPER START-->
 <div class="wrapper">
     <?php include'elm_menu.php'; ?>
-    <?php include'elm_inforum_top.php'; ?>
-    <?php include'elm_inforum_mid.php'; ?>
-	<?php include'elm_inforum_foot.php'; ?>
+    <?php include'elm_ftop.php'; ?>
+<!--CONTANT START-->
+    <div class="contant">
+    	<div class="container">
+        	<div class="row">
+            	<div class="span8">
+                	<div class="blog">
+                    <h2>Topik Forum</h2>
+                    	<?php include 'daftar_topik.php'; ?>
+                        
+                        
+                    </div>
+                    <div class="pagination">
+                    	<ul>
+                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span4">
+                	<!--SIDEBAR START-->
+                	<div class="sidebar">
+                    	<!--PAPULAR POST WIDGET START-->
+                        <div class="widget widget-papular-post">
+                        	<h2>Blablabla</h2>
+                            <ul>
+                    	<!--LIST ITEM START-->
+                        <li>
+                        <h4>AAAA</h4>
+                            <div class="text">
+                                <p class="date"> Di post tanggal wewewew oleh<span>  
+                                wewe </span></p>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                        <h4>AAAA</h4>
+                            <div class="text">
+                                <p class="date"> Di post tanggal wewewew oleh<span>  
+                                wewe </span></p>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                        <h4>AAAA</h4>
+                            <div class="text">
+                                <p class="date"> Di post tanggal wewewew oleh<span>  
+                                wewe </span></p>
+                                <p></p>
+                            </div>
+                        </li>
+                        <!--LIST ITEM END-->
+                        	</ul>
+                        </div>
+                        <!--PAPULAR POST WIDGET END-->
+                        
+                       
+                    </div>
+                    <!--SIDEBAR END-->
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <!--CONTANT END-->
+	<?php include'elm_ffooter.php'; ?>
     
        
 </div>
 <!--WRAPPER END-->
-<!-- Jquery Lib -->
-<script src="../js/jquery-1.11.0.min.js"></script>
-<!-- Bootstrap -->
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.bxslider.min.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
-<script src="../js/owl.carousel.js"></script>
-<script src="../js/modernizr.js"></script>
-<script type="text/javascript" src="../js/skrollr.min.js"></script>
-<script src="../js/functions.js"></script>
+<?php include'elm_fjs.php'; ?>
 </body>
 </html>

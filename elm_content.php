@@ -5,7 +5,7 @@
         	<div class="container">
             	<!--SECTION HEADER START-->
             	<div class="sec-header">
-                	<h2>Selamat Datang di HTPRO</h2>
+                	<h2>Selamat Datang di PHPRO</h2>
                     <p>blablablablablablabla</p>
                     <span></span>
                     <span></span>
