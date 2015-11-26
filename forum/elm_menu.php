@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="../images/icon/webicon.ico">
+<link rel="shortcut icon" href="../images/icon/webicons.png">
 <!--HEADER START-->
     <header>
     	<!--TOP STRIP START-->
@@ -57,7 +57,7 @@
 							<ul>
 								<li><a href="../admin_user_input.php">User</a></li>
 								<li><a href="../admin_materi_input.php">Materi</a></li>
-                                <li><a href="../admin_forum_input.php">Forum</a></li>
+                                <li><a href="../admin_forum_input.php">Topik Forum</a></li>
 							</ul>
 						</li>
                         <li><a href="javascript:void(0)">Lihat Data</a>

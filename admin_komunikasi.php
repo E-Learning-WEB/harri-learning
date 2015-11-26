@@ -78,6 +78,7 @@
                 <td><strong>Status</strong></td>
                 <td><strong>ID Komentar</strong></td>
                 <td><strong>ID Anggota</strong></td>
+                <td><strong>Kategori</strong></td>
                 <td><strong>Judul</strong></td>
                 <td><strong>Waktu</strong></td>
                 <td><strong>Isi</strong></td>
@@ -93,6 +94,7 @@
                 <td><b><?php echo $row['status'];?></b></td>
                 <td><b><?php echo $row['id_komentar'];?></b></td>
                 <td><b><?php echo $row['id_anggota'];?></b></td>
+                <td><b><?php echo $row['kdkforum'];?></b></td>
                 <td><b><?php echo $row['judul'];?></b></td>
                 <td><b><?php echo date('d-m-Y - H:i:s A',$row['waktu']);?></b></td>
                 <td><b><?php echo $row['isi'];?></b></td>

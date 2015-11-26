@@ -1651,7 +1651,6 @@ FOOTER SECTION START
 footer{
 	float:left;
 	width:100%;
-	/*background-image:url(../images/footer-bg.png);*/
 }
 .footer-top{
 	float:left;
@@ -2632,9 +2631,9 @@ PAPULAR POST WIDGET START
 	float:left;
 	width:100%;
 	background-color:#FFF;
-	padding:15px;
+	padding:20px;
 	margin:5px 0px 0px 0px;
-	border:solid 1px #fff;
+	border:solid 2px #fff;
 }
 
 .widget-papular-post ul li:first-child{

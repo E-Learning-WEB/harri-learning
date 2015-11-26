@@ -21,14 +21,20 @@
 	include 'con_koneksi.php';
 	include 'plugin/fc.parsedown.php';
 	$Parsedown = new Parsedown();
+	
+	$query = "SELECT kategori FROM tbkforum";
+	$kategori = mysql_query($query);
+	
 	if (isset($_POST['input_forum']))
 	{
 		$id_anggota = $_SESSION['id_anggota'];
+		$kdkforum	= $_POST['kdkforum'];
 		$judul 		= $_POST['judul'];
 		$isi 		= $_POST['isi'];
 		$waktu = time();
 		$tipe = 1;
 		$id_komentar =0;
+		
 		//untuk cek apakah judul dan isi benar terisi
 		if (trim($judul) == '' or trim($isi) == '' )
 		{
@@ -52,6 +58,7 @@
 			else
 				{
 				$sql = "insert into tbkomunikasi set 	id_anggota = '$id_anggota',
+														kdkforum = '$kdkforum',
 														judul 	= '$judul',
 														tipe 	= $tipe,
 														waktu 	= '$waktu',
@@ -75,6 +82,14 @@
                 <div class="form-body">
                 <fieldset>
                 <legend>Input Topik Forum Baru</legend>
+                <label>Kategori</label>
+                <select name="kdkforum" class="input-block-level">
+                <?php 
+				while ($row = mysql_fetch_array($kategori))
+				{
+				echo "<option value='".$row['kategori']."'>".$row['kategori']."</option>";
+				}?>
+                </select>
                 <label>Judul</label>
                 <input name="judul" type="text" placeholder="Masukkan judul" class="input-block-level" maxlength="75" required="required">
                 <label>Isi</label>

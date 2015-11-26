@@ -4,8 +4,7 @@ include('../function.php');
 ?>
 
   <?php
-  $kategori = $_GET['kategori'];
-  $sql = "SELECT * FROM tbkomunikasi WHERE kdkforum='$kategori'";
+  $sql = 'SELECT * FROM tbkforum';
   $data = mysql_query($sql);
   while($row = mysql_fetch_assoc($data))
   {
@@ -18,11 +17,10 @@ include('../function.php');
                         	
                             <ul>
                     	<!--LIST ITEM START-->
-                        <li>
-                        <h4><a href="topik.php?id=<?php echo $row['id_komunikasi'] ?>"><?php echo $row['judul'] ?></a></h4>
+                        &nbsp;<li>
+                        <h4><a href="kategori.php?kategori=<?php echo $row['kategori'] ?>"><?php echo $row['kategori'] ?></a></h4>
                             <div class="text">
-                                <p class="date"> Di post tanggal <?php echo date('d M Y',$row['waktu']) ?> oleh<span>  
-                                <?php echo $fungsi->idanggota_to_username($row['id_anggota'])['nama'] ?> </span></p>
+                                <p class="date"> Deskripsi: <?php echo $row['keterangan'] ?></p>
                                 
                             </div>
                         </li>
