@@ -35,8 +35,7 @@ if (isset($_SESSION['id_anggota']))
             <!--PROFILE IMAGE START-->
             <div class="profile-box profile-view">
             <div class="thumb">
-            <img src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" 
-            	alt="" width="140px" height="140px">
+            <img class="squarephoto140" src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" alt="">
             </div>
             <div class="text">
             <p>Selamat Datang</p>
@@ -44,14 +43,7 @@ if (isset($_SESSION['id_anggota']))
             </div>
             </div>
             <!--PROFILE IMAGE END-->
-            <!--EDIT PROFILE START-->
-            <div class="profile-box edit-profile">
-            <h2>Account Setting</h2>
-            <ul>
-            	<li><a href="profile_edit.php">Edit Profil</a></li>
-            </ul>
-            </div>
-            <!--EDIT PROFILE END-->
+            
             </div>
             <div class="span8">
             <!--EDIT PROFILE START-->

@@ -70,8 +70,7 @@
     <tr height="50px">
     <td width="10px"><strong>ID Materi</strong></td>
         <td><strong>Judul</strong></td>
-        <td><strong>Materi</strong></td>
-        <td><strong>Video</strong></td>
+        <td><strong>File</strong></td>
         <td><strong>Waktu</strong></td>
         <td><strong>Proses</strong></td>
     </tr></thead>
@@ -83,8 +82,7 @@
     	<td><b><?php echo $row['id_materi'];?></b></td>
         <td><b><a href="admin_materi_show.php?id_materi=<?php echo $row['id_materi'];?>"><?php echo $row['judul'];?></a>
         	</b></td>
-        <td><b><?php echo $row['materi'];?></b></td>
-        <td><b><?php echo $row['video'];?></b></td>
+        <td><b><?php echo $row['file'];?></b></td>
         <td><b><?php echo date('d-m-Y - H:i:s A',$row['waktu']);?></b></td>
         <td><a href="admin_materi_del.php?id_materi=<?php echo $row['id_materi']; ?>"title="Hapus Data">
         	<i class="fa fa-trash-o fa-2x" title="Delete"></i></a> 

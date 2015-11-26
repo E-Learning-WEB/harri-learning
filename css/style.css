@@ -3897,6 +3897,7 @@ TEACHER PROFILE PAGE START
 EDIT PROFILE PAGE START
 ===========================================
 */
+
 .profile-box{
 	border-radius:5px;
 	float:left;
@@ -5167,6 +5168,18 @@ section.cp-our-services p, .contant section.cp-our-services h2{
 /* font-family:'Crete Round',serif;*/
 /*font-family: 'Oswald', sans-serif;*/
 
+/* Input css baru */
+
 .fa-arrow {
   color: #00A685;
+}
+
+.squarephoto140 {
+width: 140px;
+height: 140px;
+}
+
+.squarephoto70 {
+width: 70px;
+height: 70px;
 }

@@ -84,7 +84,7 @@ if (isset($_POST['edit_foto']))
                 	<!--PROFILE IMAGE START-->
                 	<div class="profile-box profile-view">
                         <div class="thumb">
-                            <a href="#"><img src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" alt="" width="140px" height="140px"></a>
+                            <a href="#"><img class="squarephoto140" src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" alt=""></a>
                         </div>
                         <div class="text">
                             <p></p>
@@ -120,38 +120,40 @@ if (isset($_POST['edit_foto']))
                         <ul>
                         	<li>
                             	<label>Username</label>
-                                <input name="id_anggota" type="text" class="input-block-level"  placeholder="Enter your Username" value="<?php echo $row['id_anggota'];?>" readonly>
+                                <input name="id_anggota" type="text" class="input-block-level" 
+                                	value="<?php echo $row['id_anggota'];?>" readonly>
                             </li>
                             <li>
                             	<label>Nama</label>
-                                <input name="nama" type="text" class="input-block-level" placeholder="Enter your Last Name" value="<?php echo $row['nama'];?>">
+                                <input name="nama" type="text" class="input-block-level" placeholder="Nama Kamu" value="<?php echo $row['nama'];?>">
                             </li>
                             <li>
                             	<label>Email</label>
-                                <input name="email" type="email" class="input-block-level" value="<?php echo $row['email'];?>">
+                                <input name="email" type="email" class="input-block-level" placeholder="namaemail@host.com" value="<?php echo $row['email'];?>">
                             </li>
                             <li>
                             	<label>Jenis Kelamin</label>
                                 <select name="jenis_kelamin" class="input-block-level">
+                                	<option value="Belum diatur">Pilih Gender</option>
                                 	<option value="Pria">Pria</option>
                                     <option value="Wanita">Wanita</option>
                                 </select>
                             </li>
                             <li>
                             	<label>Alamat</label>
-                                <input name="alamat" type="text" class="input-block-level" value="<?php echo $row['alamat'];?>">
+                                <input name="alamat" type="text" class="input-block-level" placeholder="Jl. nama jalan Gg. nama gang No. nomor rumah" value="<?php echo $row['alamat'];?>">
                             </li>
                             <li>
                             	<label>Kota</label>
-                                <input name="kota" type="text" class="input-block-level" value="<?php echo $row['kota'];?>">
+                                <input name="kota" type="text" class="input-block-level" placeholder="Nama Kota kamu tinggal" value="<?php echo $row['kota'];?>">
                             </li>
                             <li>
                             	<label>Tempat & Tanggal Lahir</label>
-                                <input name="ttl" type="text" class="input-block-level" value="<?php echo $row['ttl'];?>">
+                                <input name="ttl" type="text" class="input-block-level" placeholder="Tempat lahir, 1 Januari 1979" value="<?php echo $row['ttl'];?>">
                             </li>
                             <li>
                             	<label>Nomor Kontak</label>
-                                <input name="no_kontak" type="text" class="input-block-level" value="<?php echo $row['no_kontak'];?>">
+                                <input name="no_kontak" type="text" class="input-block-level" placeholder="nomor telp/hp" value="<?php echo $row['no_kontak'];?>">
                             </li>
                             <li class="fw">
                             	<button type="submit" name="edit_profile" class="btn-style">Update</button>
@@ -168,7 +170,7 @@ if (isset($_POST['edit_foto']))
                         <input name="id_anggota" type="hidden" value="<?php echo $row['id_anggota'];?>">
                         	<li>
                             	<label>Password Baru</label>
-                                <input name="password" id="pass1" type="password" class="input-block-level"  placeholder="Ketik Password">
+                                <input name="password" id="pass1" type="password" class="input-block-level"  placeholder="Ketik Password Baru">
                             </li>
                             <li>
                             	<label>Konfirmasi Password</label>

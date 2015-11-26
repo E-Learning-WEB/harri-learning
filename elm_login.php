@@ -56,11 +56,11 @@
                         <form action="signin.php" method="post">
                         <div class="form-body">
                         <fieldset>
-                        <legend>Masuk Untuk Mendapatkan Akses Lebih di PHPRO</legend>
+                        <legend>Login Member PHPRO</legend>
                         <label>Username</label>
-                        <input name="id_anggota" type="text" placeholder="Enter your Username" class="input-block-level" maxlenght="10" required="required">
+                        <input name="id_anggota" type="text" placeholder="Enter your Username" class="input-block-level" maxlenght="10">
                         <label>Password</label>
-                        <input name="password" type="password" placeholder="Enter Password" class="input-block-level" maxlenght="15" required="required">                        
+                        <input name="password" type="password" placeholder="Enter Password" class="input-block-level" maxlenght="15">                        
                         
                         <button name="login" type="submit" class="btn-style">Masuk</button>
                         </fieldset>

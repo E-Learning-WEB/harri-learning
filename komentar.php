@@ -70,7 +70,7 @@ while($row = mysql_fetch_assoc($data))
 			<!--COMMENTS ITEM START-->
             <li>
             <div class="thumb">
-            <a href="#"><img width="70px" height="70px" src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" alt=""></a>
+            <a href="#"><img class="squarephoto70" src="<?php echo 'images/fotoprofil/'. $fungsifoto->idanggota_to_foto($row['id_anggota'])['foto']; ?>" alt=""></a>
             </div>
             <div class="text">
                 <h4><a href="#"><?php echo $fungsi->idanggota_to_username($row['id_anggota'])['nama']; ?></a></h4>
