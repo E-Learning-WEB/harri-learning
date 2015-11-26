@@ -19,7 +19,7 @@ if(isset($_POST['kirimkomentarforum']))
 										 	isi = '$isi'";
 	mysql_query($sql);		
 	
-	$pesan = include 'redir_fin.php';
+	$pesan = include 'redir.php';
 	$redirect = header("refresh:3;url=http://localhost/htpro/forum/topik.php?id=$_POST[id_komentar]");					
 	}
 
@@ -33,7 +33,7 @@ if(isset($_GET['aksi']))
 		$sql = "delete from tbkomunikasi where id_komunikasi = $id_komunikasi";
 		mysql_query($sql);
 		
-		$pesan = include 'redir_fdel.php';
+		$pesan = include 'redir.php';
 		$redirect = header("refresh:2;url=http://localhost/htpro/forum/topik.php?id=$_GET[id]");
 		}
 	}
@@ -50,7 +50,7 @@ if(isset($_POST['editkomentarforum']))
 
 	mysql_query($sql);	
 	
-	$pesan = include 'redir_fed.php';
+	$pesan = include 'redir.php';
 	$redirect = header("refresh:3;url=http://localhost/htpro/forum/topik.php?id=$_POST[id_komentar]");					
 	}	
 
@@ -61,7 +61,7 @@ if($_GET['aksi']== 'hapus-topikforum')
 	$sql = "Update tbkomunikasi SET status='2' Where id_komunikasi = $_GET[id]";
 	mysql_query($sql);
 	
-	$pesan = include 'redir_fed.php';
+	$pesan = include 'redir.php';
 	header("refresh:2;url=http://localhost/htpro/forum/index.php");
 	}
 ?>

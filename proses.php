@@ -18,7 +18,7 @@ if(isset($_POST['kirimkomentarmateri']))
 									   		isi = '$isi'";
 	mysql_query($sql);
 	
-	$pesan = include 'redir_in.php';
+	$pesan = include 'redir.php';
 	$redirect = header("refresh:3;url=http://localhost/htpro/materi_show.php?id_materi=$_POST[id_materi]");
 	}
 	
@@ -32,7 +32,7 @@ if(isset($_GET['aksi']))
 		$sql_kom = "delete from tbkomunikasi WHERE id_komunikasi='$_GET[id_komunikasi]'";
 		mysql_query($sql_kom);
 			
-		$pesan = include 'redir_del.php';
+		$pesan = include 'redir.php';
 		$redirect = header("refresh:3;url=http://localhost/htpro/materi_show.php?id_materi=$_GET[id_materi]");
 		}
 	}
@@ -49,7 +49,7 @@ if(isset($_POST['editkomentarmateri']))
 
 	mysql_query($sql);	
 	
-	$pesan = include 'redir_ed.php';
+	$pesan = include 'redir.php';
 	$redirect = header("refresh:3;url=http://localhost/htpro/materi_show.php?id_materi=$_POST[id_materi]");					
 	}
 ?>

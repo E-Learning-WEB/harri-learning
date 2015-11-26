@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Education</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php include 'elm_css.php' ?>
+	<?php include'elm_fcss.php'; ?>
 </head>
 <body>
 <!--WRAPPER START-->
@@ -24,12 +24,11 @@
 								<fieldset>
 								<br>
 								<legend>Kamu akan diarahkan...</legend>
-                                <legend>Komentar telah berhasil diedit</legend>
 								<label>Kamu akan diarahkan ke halaman sebelumnya dalam waktu 3 detik</label>
 								</fieldset>
 								</div>
 								<div class="footer">
-                                <img src="images/check.png">
+                                <img src="../images/check.png">
                             	</div>
 								</form>
 						</div>
@@ -40,6 +39,6 @@
   
 </div>
 <!--WRAPPER END-->
-<?php include 'elm_js.php' ?>
+<?php include'elm_fjs.php'; ?>
 </body>
 </html>
