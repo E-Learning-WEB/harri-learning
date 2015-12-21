@@ -706,7 +706,7 @@ COURSES SECTION START
 */
 .course{
 	background-color:#fff;
-	border:solid 2px rgba(0,0,0,0.1);
+	border-bottom:solid 2px rgba(0,0,0,0.1);
 	float:left;
 	text-align:left;
 	margin:15px 0px 0px 0px;
@@ -769,8 +769,7 @@ COURSES SECTION START
 	display:inline-block;
 }
 .course .header, .course .course-name{
-	padding:0px 10px;
-	height:5em;
+	padding:0px 10px
 }
 .course .course-name p{
 	display:inline-block;
@@ -5207,18 +5206,3 @@ height: 70px;
 }
 .btn-materi:hover{
 	color:#fff;
-}
-
-.quote {
-	background-color:#E1E1E1;
-	padding:1em 1em 1em 1em;
-	margin-bottom:1em;
-}
-
-.quotetext {
-	background-color:#F4F4F4;
-	padding:1em 1em 1em 1em;
-	margin-bottom:0.1em;
-	margin-top:1em;
-}
-

@@ -11,29 +11,24 @@ include('../function.php');
   ?>
 
 <!--SIDEBAR START-->
-                	<div class="sidebar">
-                    	<!--PAPULAR POST WIDGET START-->
-                        <div class="widget widget-papular-post">
-                        	
-                            <ul>
-                    	<!--LIST ITEM START-->
-                        &nbsp;<li>
-                        <h4><a href="kategori.php?kategori=<?php echo $row['kategori'] ?>"><?php echo $row['kategori'] ?></a></h4>
-                            <div class="text">
-                                <p class="date"> Deskripsi: <?php echo $row['keterangan'] ?></p>
-                                
-                            </div>
-                        </li>
-                        
-                        
-                        <!--LIST ITEM END-->
-                        	</ul>
-                        </div>
-                        <!--PAPULAR POST WIDGET END-->
-                        
-                       
-                    </div>
-                    <!--SIDEBAR END-->
-                          <?php
-  }
-  ?>
+<div class="sidebar">
+<!--PAPULAR POST WIDGET START-->
+<div class="widget widget-papular-post">
+	<ul>
+    <!--LIST ITEM START-->
+    &nbsp;
+    <li>
+    <h4><a href="kategori.php?kategori=<?php echo $row['kategori'] ?>"><?php echo $row['kategori'] ?></a></h4>
+    <div class="text">
+    <p class="date"> Deskripsi: <?php echo $row['keterangan'] ?></p>
+    </div>
+    </li>
+    <!--LIST ITEM END-->
+    </ul>
+</div>
+<!--PAPULAR POST WIDGET END-->
+</div>
+<!--SIDEBAR END-->
+<?php
+}
+?>

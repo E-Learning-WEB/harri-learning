@@ -37,7 +37,7 @@ else
                             <div class="text">
                             	<p><?php echo $row['isi'] ?></p>
                             </div>
-                            <a href="proses_forum.php?aksi=hapus-topikforum&id=<?php echo $_GET['id']; ?>" class="btn-style">Hapus</a>
+                            <!--<a href="proses_forum.php?aksi=hapus-topikforum&id=<?php echo $_GET['id']; ?>" class="btn-style">Hapus</a>-->
                             <div class="blog-comments">
                             	<a href="#"><i class="fa fa-user"></i><?php echo $fungsi->idanggota_to_username($row['id_anggota'])['nama'] ?></a>
                                 <a class="pull-right" href="#"><i class="fa fa-calendar"></i><?php echo date('d M Y',$row['waktu']) ?></a>

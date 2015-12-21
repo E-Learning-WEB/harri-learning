@@ -22,10 +22,10 @@
 				echo '<meta http-equiv="refresh" content="3; url=index.php" /><br/>';
 				echo '                
 						<div class="row">
-						<div class="span3">
-						</div>
-						<div class="span6">
-							<div class="form-box">
+							<div class="span3">
+							</div>
+							<div class="span6">
+								<div class="form-box">
 								<form>
 								<div class="form-body">
 								<fieldset>
@@ -42,6 +42,7 @@
                                 <img src="images/welcome.png">
                             	</div>
 								</form>
+								</div>
 							</div>
 						</div>';
 					}
@@ -75,6 +76,7 @@
                             </div>
                         </form>
                     </div>
+                </div>
                 </div>
 
 <?php } ?>

@@ -24,15 +24,13 @@
     <div class="form-box">
     <form action="admin_materi.php" method="post">
     <div class="form-body">
-    <legend>Data Materi</legend>
+    <legend>Data Kategori Forum</legend>
     <div class="row-fluid">
     <div class="span5">
     <label>Kriteria</label>
     <select name="kriteria" class="input-block-level">
-        <option value="judul">Judul</option>
-        <option value="ketmateri">Keterangan</option>
-        <option value="file">File</option>
-        <option value="waktu">Waktu</option>
+        <option value="id_materi">Kategori</option>
+        <option value="judul">Keterangan</option>
     </select>
     </div>
     <div class="span5">
@@ -53,12 +51,12 @@
 		{
 		$kriteria 	= $_POST['kriteria'];
 		$cari		= $_POST['cari'];
-		$sql 		= "select * from tbmateri where $kriteria like '%$cari%'";
+		$sql 		= "select * from tbkforum where $kriteria like '%$cari%'";
 		$data		= mysql_query($sql) or die("$sql");
 		}
 	else
 		{
-		$sql 	= "select * from tbmateri";
+		$sql 	= "select * from tbkforum";
 		$data 	= mysql_query($sql) or die("$sql");
 		}
 ?>
@@ -67,10 +65,8 @@
 	<table style="text-align:left">
     <thead>
     <tr height="50px">
-        <td><strong>Judul</strong></td>
-        <td>Keterangan</td>
-        <td><strong>File</strong></td>
-        <td><strong>Waktu</strong></td>
+        <td><strong>Kategori</strong></td>
+        <td><strong>Keterangan</strong></td>
         <td><strong>Proses</strong></td>
     </tr></thead>
 
@@ -78,18 +74,12 @@
 	while ($row = mysql_fetch_assoc($data))
 		{?>
     <tr height="35px">
-        <td><b><?php echo $row['judul'];?></b></td>
-        <td><b><?php echo $row['ketmateri'];?></b></td>    
-        <td><b><a href="admin_materi_show.php?id_materi=<?php echo $row['id_materi'];?>"><?php echo $row['file'];?></b></a></td>
-        <td><b><?php echo date('d-m-Y - H:i:s A',$row['waktu']);?></b></td>
-        <td><a href="proses.php?aksi=hapusmateri&id_materi=<?php echo $row['id_materi']?>" title="Hapus Data">
+    	<td><b><?php echo $row['kategori'];?></b></td>
+        <td><b><?php echo $row['keterangan'];?></b></td>
+        <td><a href="admin_kategori_forum_del.php?id_kategori=<?php echo $row['id_kategori']; ?>"title="Hapus Data">
         	<i class="fa fa-trash-o fa-2x" title="Delete"></i></a>
-            <a href="admin_materi_edit.php?edit=<?php echo $row['id_materi']; ?>"title="Edit Data">
+            <a href="admin_kategori_forum_edit.php?id_kategori=<?php echo $row['id_kategori']; ?>"title="Edit Data">
             <i class="fa fa-pencil fa-2x" title="Edit"></i></a>
-        <!--<a href="admin_materi_del.php?id_materi=<?php echo $row['id_materi']; ?>"title="Hapus Data">
-        	<i class="fa fa-trash-o fa-2x" title="Delete"></i></a>
-            <a href="admin_materi_edit.php?id_materi=<?php echo $row['id_materi']; ?>"title="Edit Data">
-            <i class="fa fa-pencil fa-2x" title="Edit"></i></a>-->
         </td>
     </tr>
  

@@ -59,6 +59,7 @@
 								<li><a href="admin_user_input.php">User</a></li>
 								<li><a href="admin_materi_input.php">Materi</a></li>
                                 <li><a href="admin_forum_input.php">Topik Forum</a></li>
+                                <li><a href="admin_kategori_forum_input.php">Kategori Forum</a></li>
 							</ul>
 						</li>
                         <li><a href="javascript:void(0)">Lihat Data</a>
@@ -66,6 +67,7 @@
 								<li><a href="admin_user.php">User</a></li>
 								<li><a href="admin_materi.php">Materi</a>
                                 <li><a href="admin_komunikasi.php">Komunikasi</a></li>
+                                <li><a href="admin_kategori_forum.php">Kategori Forum</a></li>
 							</ul>
 						</li>
                         <li><a href="#">Contact Us</a></li>  

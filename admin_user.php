@@ -27,10 +27,10 @@
     <div class="span5">
     <label>Kriteria</label>
     <select name="kriteria" class="input-block-level">
-        <option value="id_anggota">Username</option>
         <option value="nama">Nama</option>
-        <option value="email">Email</option>
+        <option value="id_anggota">Username</option>
         <option value="password">Password</option>
+        <option value="email">Email</option>
         <option value="status">Status</option>
     </select>
     </div>
@@ -71,7 +71,6 @@
         <td><strong>Password</strong></td>
         <td><strong>Email</strong></td>
         <td><strong>Status</strong></td>
-        <td><strong>Foto</strong></td>
         <td><strong>Proses</strong></td>
 	</tr></thead>
 
@@ -85,7 +84,6 @@
         <td><b><?php echo $row['password'];?></b></td>
         <td><b><?php echo $row['email'];?></b></td>
         <td><b><?php echo $row['status'];?></b></td>
-        <td><b><?php echo $row['foto'];?></b></td>
         <td><a href="admin_user_del.php?id_anggota=<?php echo $row['id_anggota']; ?>">
         	<i class="fa fa-trash-o fa-2x" title="Delete"></i></a>                    
             <a href="admin_user_edit.php?id_anggota=<?php echo $row['id_anggota']; ?>">

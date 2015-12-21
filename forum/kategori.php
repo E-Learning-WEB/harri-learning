@@ -23,7 +23,7 @@
                         
                         
                     </div>
-                    <div class="pagination">
+                    <!--<div class="pagination">
                     	<ul>
                             <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
                             <li><a href="#">1</a></li>
@@ -33,7 +33,7 @@
                             <li><a href="#">5</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
                 <!--<div class="span4">
                 	

@@ -31,11 +31,11 @@
         <div class="span5">
         <label>Kriteria</label>
         <select name="kriteria" class="input-block-level">
-            <option value="id_komunikasi">Nomor</option>
             <option value="tipe">Tipe</option>
             <option value="status">Status</option>
             <option value="id_komentar">ID Komentar</option>
             <option value="id_anggota">ID Anggota</option>
+            <option value="kdkforum">Kategori</option>
             <option value="judul">Judul</option>
             <option value="waktu">Waktu</option>
             <option value="isi">Isi</option>
@@ -73,7 +73,6 @@
 		<table style="text-align:left">
         	<thead>
             <tr height="50px">
-                <td><strong>Nomor</strong></td>
 				<td><strong>Tipe</strong></td>
                 <td><strong>Status</strong></td>
                 <td><strong>ID Komentar</strong></td>
@@ -89,7 +88,6 @@
 	while ($row = mysql_fetch_assoc($data))
 	{?>
             <tr height="35px">
-            	<td><b><?php echo $row['id_komunikasi'];?></b></td>
                 <td><b><?php echo $row['tipe'];?></b></td>
                 <td><b><?php echo $row['status'];?></b></td>
                 <td><b><?php echo $row['id_komentar'];?></b></td>

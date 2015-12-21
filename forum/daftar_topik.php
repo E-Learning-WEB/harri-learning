@@ -18,7 +18,7 @@ include('../function.php');
                         	
                             <ul>
                     	<!--LIST ITEM START-->
-                        <li>
+                        &nbsp;<li>
                         <h4><a href="topik.php?id=<?php echo $row['id_komunikasi'] ?>"><?php echo $row['judul'] ?></a></h4>
                             <div class="text">
                                 <p class="date"> Di post tanggal <?php echo date('d M Y',$row['waktu']) ?> oleh<span>  

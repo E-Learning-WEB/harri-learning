@@ -36,9 +36,9 @@ if(strtoupper($extensi_belakang) == 'MP4') {
 
 	<legend><span style="float:left"><a href="materi.php"><i class="fa fa-arrow-circle-left fa-2x"></i></a></span>
 	<?php echo $row['judul']; ?></legend>
-    <video width="100%" height="100%" controls>
+    <video width="70%" controls>
   	<source src="<?php echo $lokasi?>" type="video/mp4">
-	Your browser does not support the video tag.
+	Browser Anda Tidak Mendukung Format Video Kami.
 	</video>
     
 <?php } ?>
@@ -48,7 +48,6 @@ if(strtoupper($extensi_belakang) == 'MP4') {
     	</div>
 	</section>  
 <!--Akhir Tampil Materi-->
-
 
 <div class="container">
 <div class="row">
@@ -74,7 +73,7 @@ while($row = mysql_fetch_assoc($data))
             </div>
             <div class="text">
                 <h4><a href="#"><?php echo $fungsi->idanggota_to_username($row['id_anggota'])['nama']; ?></a></h4>
-                <p class="date"><?php echo date('d M Y H:i A',$row['waktu']) ?></p>
+                <p class="date" style="float:right"><?php echo date('d M Y H:i A',$row['waktu']) ?></p>
                 <p><?php echo $Parsedown->text($row['isi']) ?></p>
                 <?php include('komentar_hbe.php'); ?>
             </div>

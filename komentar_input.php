@@ -50,8 +50,12 @@
 if(!empty($_SESSION['kutipan']) && $_GET['aksi'] == 'balaskomentar')
 	{
 	$balasan_anggota = $fungsi->idanggota_to_username($datakutipan['id_anggota'])['nama'];
-	$isi =	"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quoted: ". $balasan_anggota.		
-			"<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ ".$_SESSION['kutipan']." ]</p>";
+	$isi =	//"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quoted: ". $balasan_anggota.		
+			//"<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ ".$_SESSION['kutipan']." ]</p>"
+			"<div class='quote'>Originally posted by: ". $balasan_anggota.
+			
+			"<div class='quotetext'> ".$_SESSION['kutipan']." </div></div>"
+			;
 	}
 	elseif(!empty($_SESSION['kutipan']) && $_GET['aksi'] == 'editkomentar')
 	{

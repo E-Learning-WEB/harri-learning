@@ -36,6 +36,16 @@ if(isset($_GET['aksi']))
 		$pesan = include 'redir.php';
 		$redirect = header("refresh:2;url=http://localhost/htpro/forum/topik.php?id=$_GET[id]");
 		}
+	//hapus topik forum
+	elseif($_GET['aksi'] == 'hapus-topikforum')
+		{
+		include '../con_koneksi.php';
+		$sql = "Update tbkomunikasi SET status='2' Where id_komunikasi = $_GET[id]";
+		mysql_query($sql);
+		
+		$pesan = include 'redir.php';
+		header("refresh:2;url=http://localhost/htpro/forum/index.php");
+		}
 	}
 	
 //edit komentar forum
@@ -53,15 +63,4 @@ if(isset($_POST['editkomentarforum']))
 	$pesan = include 'redir.php';
 	$redirect = header("refresh:3;url=http://localhost/htpro/forum/topik.php?id=$_POST[id_komentar]");					
 	}	
-
-//hapus topik forum
-if($_GET['aksi']== 'hapus-topikforum')
-	{
-	include '../con_koneksi.php';
-	$sql = "Update tbkomunikasi SET status='2' Where id_komunikasi = $_GET[id]";
-	mysql_query($sql);
-	
-	$pesan = include 'redir.php';
-	header("refresh:2;url=http://localhost/htpro/forum/index.php");
-	}
 ?>

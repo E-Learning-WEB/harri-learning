@@ -1,4 +1,5 @@
 <?php
+	
 	if (isset($_POST['edit_komunikasi']))
 	{
 		$id_komunikasi 	= $_POST['id_komunikasi'];
@@ -44,8 +45,7 @@
     <form method="post" action="admin_komunikasi_edit_frm.php">
     <div class="form-body">
     <legend>Edit Data Komunikasi</legend>
-    <label>ID Komunikasi</label>
-    <input name="id_komunikasi" type="text" class="input-block-level" maxlength="10" required="required" readonly 
+    <input name="id_komunikasi" type="hidden" class="input-block-level" maxlength="10" required="required" readonly 
     	value="<?php echo $row['id_komunikasi']; ?>">
     <label>Tipe</label>
     <input name="tipe" type="text" class="input-block-level" maxlength="1" value="<?php echo $row['tipe']; ?>">
@@ -58,8 +58,7 @@
     <input name="id_anggota" type="text" class="input-block-level" maxlength="10" value="<?php echo $row['id_anggota']; ?>">
     <label>Judul</label>
     <input name="judul" type="text" class="input-block-level" maxlength="75" value="<?php echo $row['judul']; ?>">
-    <label>Waktu</label>
-    <input name="waktu" type="text" class="input-block-level" maxlength="11" value="<?php echo $row['waktu']; ?>" 
+    <input name="waktu" type="hidden" class="input-block-level" maxlength="11" value="<?php echo $row['waktu']; ?>" 
     	readonly="readonly">
     <label>Isi</label>
     <textarea name="isi" class="input-block-level" rows="6" cols="10"><?php echo $row['isi']; ?></textarea>

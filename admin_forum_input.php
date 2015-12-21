@@ -81,7 +81,7 @@
             	<form method="post" action="admin_forum_input.php">
                 <div class="form-body">
                 <fieldset>
-                <legend>Input Topik Forum Baru</legend>
+                <legend>Input Topik Forum</legend>
                 <label>Kategori</label>
                 <select name="kdkforum" class="input-block-level">
                 <?php 

@@ -26,11 +26,12 @@
 		//mengambil extensi file
 		$fileextensi = pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
 		$judul 			= $_POST['judul'];
+		$ketmateri		= $_POST['ketmateri'];
 		
 		if (trim($judul) == '')
 			{
 			echo '<br />';
-			echo "<p style='text-align:center'>Judul dan materi kosong</p>";
+			echo "<p style='text-align:center'>Judul materi kosong</p>";
 			echo "<p style='text-align:center'><a class='btn-style' href='admin_materi_input.php'>Kembali</a></p>";
 			}
 		else
@@ -55,11 +56,11 @@
 						$konten = 'file = "'.$file['name'].'"';
 						
 						$sql="Insert into tbmateri set 	judul = '$judul',
+														ketmateri = '$ketmateri',
 														waktu = '$waktu',
 														$konten";
 												
 						mysql_query($sql);
-					
 						echo '<br />';
 						echo "<p style='text-align:center'>Data materi baru telah berhasil ditambahkan</p>";
 						echo '<br />';
@@ -70,7 +71,7 @@
 					else
 						{
 						echo '<script language="javascript">';
-						echo 'alert("Maaf, file yang ada upload tidak disupport")';
+						echo 'alert("Terjadi kesalahan upload")';
 						echo '</script>';
 						echo "<p style='text-align:center'><a class='btn-style' href='admin_materi_input.php'>Coba Kembali</a></p>";
 						die();
@@ -90,7 +91,10 @@
     <div class="form-body">
     <legend>Input Data Materi</legend>
     <label>Judul</label>
-    <input name="judul" type="text" placeholder="Isi Judul Materi" maxlength="35" required="required" 
+    <input name="judul" type="text" placeholder="Isi Judul Materi" maxlength="50" required="required" 
+    	class="input-block-level">
+    <label>Keterangan</label>
+    <input name="ketmateri" type="text" placeholder="Isi Keterangan Materi" maxlength="100" required="required" 
     	class="input-block-level">
     <label>Materi</label>
     <input type="file" name="file" class="input-block-level">

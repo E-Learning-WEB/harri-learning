@@ -6,14 +6,12 @@
 		$email 		= $_POST['email'];
 		$password	= $_POST['password'];
 		$status 	= $_POST['status'];
-		$foto 		= $_POST['foto'];
 		include('con_koneksi.php');
 		$sql = "update tbanggota set 	id_anggota 	= '$id_anggota',
 										nama 		= '$nama',
 										email 		= '$email',
 										password 	= '$password',
-										status 		= '$status',
-										foto		= '$foto'
+										status 		= '$status'
 										where id_anggota = '$id_anggota'";
 		mysql_query($sql);
 		header('location:admin_user.php');
@@ -54,8 +52,6 @@
     	<option value="user">User</option>
         <option value="admin">Admin</option>
     </select>
-	<label>Foto</label>
-    <input name="foto" type="text" class="input-block-level" maxlength="50" value="<?php echo $row['foto']; ?>">
     </div><br />
     <button name="edit_user" type="submit" class="btn-style">Edit</button>
     <div class="footer">

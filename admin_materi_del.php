@@ -6,4 +6,6 @@
 	
 	mysql_query($sql);
 	header('location:admin_materi.php');
+	
 ?>
+
